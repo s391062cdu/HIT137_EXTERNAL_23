@@ -2,13 +2,31 @@
 # It is overridden by the image and text models
 # Mainly to reduce duplicating code for both image and text models
 
+#import all necessary programs/parts
 import numpy as np
+from abc import ABC, abstractmethod
+from model_wrappers import TextToImageWrapper, ImageToTextWrapper
+from image_model import ImageModel, image_model
+from text_model import TextModel, text_model
 
-class BaseModel:
-    def __init__(self, image_model, text_model):
-
+#Here is structure for all both ai models
+class HuggingFaceModel(ABC):
+    def __init__(self, model_id):
+        self.model_id = model_id
         self.image_model = image_model
         self.text_model = text_model
+        self._pipe = None
+
+    @abstractmethod
+    def run(self, input_data):
+        pass
+
+
+class BaseModel:
+#This bit makes sure that the rigtht ai model gets used
+    def __init__(self, t2i_wrapper, i2t_wrapper):
+        self.t2i_wrapper = t2i_wrapper
+        self.i2t_wrapper = i2t_wrapper
 
     def process_input (self, input_data):
 

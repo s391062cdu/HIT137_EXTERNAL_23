@@ -6,17 +6,17 @@ from base_model import BaseModel
 from model_wrappers import TextToImageWrapper, ImageToTextWrapper
 from image_model import image_model
 from text_model import text_model
-
-t2i_wrapper = TextToImageWrapper(image_model)
-i2t_wrapper = ImageToTextWrapper(text_model)
-
-base_model = BaseModel(t2i_wrapper, i2t_wrapper)
+from utils import update_output_message, clear_image_display
 
 import tkinter as tk
 from tkinter import filedialog
 from PIL import Image, ImageTk
 
 
+
+t2i_wrapper = TextToImageWrapper(image_model)
+i2t_wrapper = ImageToTextWrapper(text_model)
+base_model = BaseModel(t2i_wrapper, i2t_wrapper)
 
 def process_input():
     user_input = input_text.get().strip()

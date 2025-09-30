@@ -3,7 +3,7 @@ class TextToImageWrapper:
         self.model = model
 
     def generate(self, text_input):
-        return self.model.generate_image(text_input)
+        return self.model.run(text_input)
     
 
 class ImageToTextWrapper:
@@ -11,4 +11,4 @@ class ImageToTextWrapper:
         self.model = model
 
     def generate(self, image_array):
-        return self.mode.generate_text(image_array)
+        return self.model.run(image_array)
