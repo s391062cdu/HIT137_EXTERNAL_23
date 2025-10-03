@@ -2,7 +2,9 @@ Saturday 29/09/25, - Aidan
 
 Contacted Abhijith as I was struggling to finish the assignment from the work Connor had done. He informed me that the assignment needed to be split into three folders: AI Models. He also talked me through an example code. The 'Assignment3' folder follows these instructions.
 
-setup Instructions for Running main.py - Zayne
+
+
+Setup Instructions for Running main.py - Zayne
 
 1. Install Python
    - Download and install Python 3.11  
