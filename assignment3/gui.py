@@ -13,7 +13,7 @@ class Application:
         left_frame = tk.Frame(root, padx=10, pady=10)
         left_frame.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
 
-        tk.Label(left_frame, text="Text → Image").pack()
+        tk.Label(left_frame, text="Text to Image").pack()
         self.prompt_entry = tk.Text(left_frame, height=5, width=40)
         self.prompt_entry.pack()
 
@@ -27,7 +27,7 @@ class Application:
         right_frame = tk.Frame(root, padx=10, pady=10)
         right_frame.pack(side=tk.RIGHT, fill=tk.BOTH, expand=True)
 
-        tk.Label(right_frame, text="Image → Text").pack()
+        tk.Label(right_frame, text="Image to Text").pack()
 
         self.upload_btn = tk.Button(right_frame, text="Upload Image", command=self.upload_image)
         self.upload_btn.pack(pady=5)
@@ -72,7 +72,8 @@ class Application:
         self.caption_box.insert(tk.END, caption)
 
 
-if __name__ == "__main__":
+if name == "main":
     root = tk.Tk()
     app = Application(root)
     root.mainloop()
+
