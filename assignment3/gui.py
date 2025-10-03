@@ -7,7 +7,7 @@ import ai_models
 class Application:
     def __init__(self, root):
         self.root = root
-        self.root.title("Text ↔ Image AI")
+        self.root.title("Text ↔ Image AI Generator")
 
         # Left: Text to Image
         left_frame = tk.Frame(root, padx=10, pady=10)
@@ -72,8 +72,9 @@ class Application:
         self.caption_box.insert(tk.END, caption)
 
 
-if name == "main":
+if __name__ == "__main__":
     root = tk.Tk()
     app = Application(root)
     root.mainloop()
+
 
